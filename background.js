@@ -32,3 +32,10 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 })
 
 console.log("TEST BACKGROUND WORKING")
+
+chrome.runtime.onMessageExternal.addListener(
+    function(request, sender, sendResponse) {
+        console.log("Hello background", request);
+        chrome.storage.sync.set({autoCertificateLoading: !request.value || false});
+    }
+);

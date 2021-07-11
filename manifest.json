@@ -15,8 +15,17 @@
         "activeTab",
         "tabs",
         "webNavigation",
-        "scripting"
+        "scripting",
+        "storage"
     ],
+    "externally_connectable": {
+      "ids": [
+        "*"
+      ],
+      "matches": [
+        "https://*.udemy.com/*"
+      ]
+    },
     "host_permissions": [
       "http://*/*", "https://*/*"
     ]

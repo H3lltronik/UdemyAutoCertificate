@@ -51,11 +51,11 @@
                     let checkboxAlreadyActive = this.hasACheckBoxActive(section, checkboxIndex);
                     if (!checkboxAlreadyActive) {
                         this.debug(`Checkbox ${checkboxIndex} is NOT active!!`)
-                        checkbox.click();
+                        // checkbox.click();
                     } else {
                         // checkbox.click();
                     }
-                    await this.waitforme(1000);
+                    await this.waitforme(200);
                 }
     
                 await this.waitforme(1000);
@@ -95,5 +95,7 @@
     
     main.setup();
     await main.run();
-    console.log("Certificated! Finished")
+    console.log("Certificated!")
+    chrome.runtime.sendMessage("aiajhoglomonfcnbnhackclmlkbbeaig", {type: 'processDone', value: true});
+    console.log("Finished!", chrome.runtime.sendMessage)
 })()
