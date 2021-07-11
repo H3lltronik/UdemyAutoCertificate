@@ -1,0 +1,23 @@
+{
+    "name": "Udemy AutoCertificate",
+    "description": "Build an Extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "/images/favicon-32x32.png",
+      "default_title": "Udemy Wea!"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "webNavigation",
+        "scripting"
+    ],
+    "host_permissions": [
+      "http://*/*", "https://*/*"
+    ]
+  }
